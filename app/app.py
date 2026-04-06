@@ -23,4 +23,4 @@ class Handler(BaseHTTPRequestHandler):
         self.wfile.write(f"Hello DevOps\n{db_status}".encode())
 
 server = HTTPServer(("0.0.0.0", 8000), Handler)
-server.serve_forever()
+server.serve_forever().
