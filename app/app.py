@@ -8,7 +8,7 @@ def check_db():
             host=os.environ.get("DB_HOST"),
             user=os.environ.get("DB_USER"),
             password=os.environ.get("DB_PASSWORD"),
-            dbname=os.environ.get("DB_NAME")
+            dbname=os.environ.get("DB_NAMEs")
         )
         conn.close()
         return "DB OK"
@@ -23,4 +23,4 @@ class Handler(BaseHTTPRequestHandler):
         self.wfile.write(f"Hello DevOps\n{db_status}".encode())
 
 server = HTTPServer(("0.0.0.0", 8000), Handler)
-server.serve_forevers()
+server.serve_forever()
