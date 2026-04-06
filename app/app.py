@@ -8,7 +8,7 @@ def check_db():
             host=os.environ.get("DB_HOST"),
             user=os.environ.get("DB_USER"),
             password=os.environ.get("DB_PASSWORD"),
-            dbname=os.environ.get("DB_NAMEs")
+            dbname=os.environ.get("DB_NAME")
         )
         conn.close()
         return "DB OK"
